@@ -1,1 +1,30 @@
-<p>contact-us works!</p>
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+    <label>
+        First Name:
+        <input type="text" formControlName="firstName">
+    </label>
+
+    <label>
+        Last Name:
+        <input type="text" formControlName="lastName">
+    </label>
+
+    <label>
+        Age:
+        <input type="text" formControlName="age">
+    </label>
+
+    <label>
+        Driver License Number:
+        <input type="text" formControlName="driverLicenseNumber">
+    </label>
+
+    <label>
+        Email:
+        <input type="text" formControlName="eMailAdress">
+    </label>
+
+    <input type="submit" class="btn btn-primary" value="Submit">
+
+</form>
