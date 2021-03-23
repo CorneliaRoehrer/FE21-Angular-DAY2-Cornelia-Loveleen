@@ -1,1 +1,5 @@
-/* No CSS *//*# sourceMappingURL=home.component.css.map */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}/*# sourceMappingURL=home.component.css.map */

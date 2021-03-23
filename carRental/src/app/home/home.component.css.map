@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "home.component.scss"
-    ],
-    "names": [],
-    "file": "home.component.css"
-}
+{"version":3,"sources":["home.component.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,mBAAA;EACA,6BAAA;AACJ","file":"home.component.css"}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  buttonName:string;
+
+  clickCounter = 0;
+
+  
+
+
+clickCount(){
+    this.clickCounter = this.clickCounter + 10;
+    // this.clickCounter += 10 ;
+    //console.log(this.clickCounter)
+  }
+  constructor() { 
+
+    this.buttonName = "Donate 10€"
+  }
+
+  
 
   ngOnInit(): void {
   }

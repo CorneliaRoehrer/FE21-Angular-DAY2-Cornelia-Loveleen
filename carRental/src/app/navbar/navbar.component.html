@@ -1,22 +1,38 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="contact-us">Contact us</a>
-            </li>
-            <li class="nav-item">
-                <form class="container-fluid justify-content-start">
-                    <button class="btn btn-outline-success me-2" type="button"></button>
-                </form>
-            </li>
-        </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="contact-us">Contact us</a>
+                </li>
+                <li class="nav-item">
+
+                    <button class="btn btn-outline-success me-2" type="button" (click)="clickCount()">{{buttonName}}</button>
+                </li>
+                <li class="nav-item text-secondary">
+                    {{ clickCounter }} €
+                </li>
+                <li>
+                    <ng-template [ngIf]="clickCounter >= 200" [ngIfElse]="none">
+
+                        <p class="text-danger"> Congratulations, you are a <b>VIP</b> now. </p>
+
+                    </ng-template>
+
+                    <ng-template #none>
+
+                        <p class="text-primary"> Thanks for Donation. </p>
+
+                    </ng-template>
+                </li>
+
+            </ul>
         </div>
     </div>
 </nav>

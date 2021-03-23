@@ -1,9 +1,11 @@
-<div class="card" style="width: 18rem;" *ngFor="let value of rentalCars">
-    <img src="{{ value.img }}" class="card-img-top" alt="car">
-    <div class="card-body">
-        <h5 class="card-title">{{ value.brand}}</h5>
-        <p class="card-text">{{ value.model}}</p>
-        <p class="card-text">{{ value.year }}</p>
-        <p class="card-text">{{ value.price }}</p>
+<div class="container pt-4">
+    <div class="card p-4" style="width: 18rem;" *ngFor="let value of rentalCars">
+        <img src="{{ value.img }}" class="card-img-top" alt="car">
+        <div class="card-body">
+            <h5 class="card-title">{{ value.brand}}</h5>
+            <p class="card-text">Model: {{ value.model}}</p>
+            <p class="card-text">Construction-Year: {{ value.year }}</p>
+            <p class="card-text">Rental Price: {{ value.price }} € per Day</p>
+        </div>
     </div>
 </div>
